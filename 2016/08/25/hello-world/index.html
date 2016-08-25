@@ -17,7 +17,7 @@
 <!--<![endif]-->
 
 <head>
-  <title>Hexo github搭建博客 | Bu&#39;S BLOG</title>
+  <title>Hello World | Bu&#39;S BLOG</title>
   <!-- Meta data -->
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -197,29 +197,24 @@
         <div class="row col-md-offset-2">
             <div class="col-md-8">
     			<span class="post-meta">
-      <time datetime="2016-08-25T08:39:37.000Z" itemprop="datePublished">
+      <time datetime="2016-08-25T03:43:11.000Z" itemprop="datePublished">
           2016-08-25
       </time>
     
 </span>
-                <h1>Hexo github搭建博客</h1>
+                <h1>Hello World</h1>
             </div>
         </div>
         <div class="col-md-8 col-md-offset-2">
-      		<p>mac下利用hexo在Github上搭建博客</p>
-<p>#注册Github账户<br>去github官网<a href="https://github.com" target="_blank" rel="external">https://github.com</a>注册即可。</p>
-<p>#安装hexo<br>需要先安装npm。npm可从<a href="https://nodejs.org/en/直接下载OS" target="_blank" rel="external">https://nodejs.org/en/直接下载OS</a> X安装包。也可以安装ruby后安装brew，再用brew install node安装npm。<br>安装npm后，用<br>npm install -g hexo<br>cd /Users/bu/Documents/github_pages/website/hexo #写一个hexo文档所在的位置，网站存储在这里面<br>hexo init<br>npm install<br>安装hexo。<br>此时可以启动本地服务器<br>hexo server（或hexo s）<br>根据提示在浏览器打开<a href="http://0.0.0.0:4000即可。" target="_blank" rel="external">http://0.0.0.0:4000即可。</a></p>
-<p>#安装git<br>以前已经安装过git，因此这里没有安装。具体方法可搜索网上资料。</p>
-<p>#配置SSH<br>需要利用ssh-keygene生成秘钥，如果以前已经存在连接到其他服务器的密钥，需要注意不要把以前的密钥覆盖，同时修改~/.ssh/下config文件，告诉每个服务器对应的密钥。</p>
-<p>cd ~/.ssh<br>mkdir key_backup<br>cp id_rsa* key_backup #拷贝以防覆盖<br>ssh-keygene -t ras -C “xxxx@xxxx.com” #注册github的邮箱。该命令会提示私钥产生的位置，可以写/Users/bu/.ssh/github_rsa</p>
-<p>修改~/.ssh/config文件（如果不存在则创建），按下面示例告诉每个服务器对应的密钥。第一个是保存以前的密钥和对应的服务器ip，第二个是连接github.com用的，只需要注意密钥文件地址IdentityFile设定的地址正确即可。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">Host 随意命名1</div><div class="line"> HostName xxx.xxx.xxx.xxx</div><div class="line"> User xxxxx</div><div class="line"> IdentityFile ~/.ssh/id_rsa</div><div class="line"></div><div class="line">Host 随意命名2</div><div class="line"> HostName github.com</div><div class="line"> User git</div><div class="line"> IdentityFile ~/.ssh/github_rsa</div></pre></td></tr></table></figure>
-<p>将SSH 公钥添加到Github<br>登录到GitHub页面，Account Settings-&gt;SSH Public Keys-&gt;Add another key将生成的key(id_rsa.pub文件）内容copy到输入框中，save。 </p>
-<p>测试连接<br>ssh git@github.com<br>输出如下结果即可：<br>Hi xxxxxxxxx! You’ve successfully authenticated, but GitHub does not provide shell access.</p>
-<p>设置个人信息<br>git config –global user.name “xxxxxx”<br>git config –global user.email xxxxxx@xxx.com</p>
-<p>#将hexo于github连接<br>修改hexo根目录（上文中的/Users/bu/Documents/github_pages/website/hexo）下_config.yml文件。（xxxx为你的github账户名称）</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">deploy:</div><div class="line">  type: github</div><div class="line">  repo: git@github.com:xxxx/xxxx.github.io.git</div><div class="line">  branch: master</div></pre></td></tr></table></figure>
-<p>将博客上传到github<br>hexo deploy （或hexo d）</p>
+      		<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
 
             <div class="clearfix"></div>
             <hr class="nogutter">
@@ -230,7 +225,7 @@
 </nav>
 
         <div class="duoshuo">
-<div class="ds-thread" data-thread-key="2016/08/25/Hexo-github搭建博客/" data-title="Hexo github搭建博客" data-url="http://yoursite.com/2016/08/25/Hexo-github搭建博客/"></div>
+<div class="ds-thread" data-thread-key="2016/08/25/hello-world/" data-title="Hello World" data-url="http://yoursite.com/2016/08/25/hello-world/"></div>
 <script type="text/javascript">
 var duoshuoQuery = {short_name:"Jiajinbu"};
 (function() {
